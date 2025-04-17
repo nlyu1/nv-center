@@ -1,0 +1,13 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+# Project description
+
+We are writing experimental papers which document out experience in running a NV-center experiment. 
+
+- Detailed course description of the experiment can be found at [NV_description.md](mdc:reference/NV_description.md). For an overview, consult [labmanual_breakdown.md](mdc:reference/labmanual_breakdown.md). 
+- A reference paper from a previous iteration can be found in [reference_paper.md](mdc:reference/reference_paper.md). DO NOT PLAGIARIZE the paper! We will run similar experiments as the given draft by another team, but we wil have our own data, our own analysis, and our own takes. 
+- Use math preambles and shortcuts in [preamble.tex](mdc:reference/tweezers_second_draft/preamble.tex). 

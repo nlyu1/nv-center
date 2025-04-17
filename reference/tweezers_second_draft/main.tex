@@ -70,7 +70,7 @@ One of the main objectives of our experiment is to determine the trap depth of o
 Another objective of our experiment is to estimate the Boltzmann constant from the observed Brownian motion of microspheres, following the procedure outlined in~\cite{nakroshis2003measuring}. To accomplish this, we use the \textit{Trackpy} python package to identify microspheres across video frames, enabling the reconstruction of their trajectories. From these trajectories, we calculate the mean-squared displacement as a function of time and perform a linear regression through the origin to determine the slope, which is directly proportional to the thermal energy of the system. In Sec.~\ref{sec:BoltzTheory}, we derive the formulas for both the point estimates and the error analysis, accounting for uncertainties arising from particle tracking, temperature measurements, and other systematic effects. Detailed procedures for data collection, statistical analysis, and the final estimates are provided in Sec.~\ref{sec:boltzmannCalc}, where our analysis yields an experimental Boltzmann constant of $1.762 \pm 0.423 \cdot 10^{-22}\,\si{\joule\per\kelvin}$. This significant deviation from the accepted value motivates a further discussion of potential systematic errors and avenues for improving the experimental setup.
 \begin{figure}
     \centering
-    \includegraphics[width=1\linewidth]{Second_draft/figs/tweezer-schmatic.png}
+    \includegraphics[width=1\linewidth]{./figs/tweezer-schmatic.png}
     \caption{Top down layout of the experiment.}
     \label{fig:circuit}
 \end{figure}
@@ -87,7 +87,7 @@ is depicted in Fig~\ref{fig:circuit}.
 
 \begin{figure}
     \centering
-    \includegraphics[width=5cm]{Second_draft/figs/imaging.png}
+    \includegraphics[width=5cm]{./figs/imaging.png}
     \caption{Tweezer and imaging system. }
     \label{fig:tweezing}
 \end{figure}
@@ -102,7 +102,7 @@ and camera directed at the microscope objective. Since both the imaging and lase
 
 \begin{figure}
     \centering
-    \includegraphics[width=5cm]{Second_draft/figs/airy_pattern.jpg}
+    \includegraphics[width=5cm]{./figs/airy_pattern.jpg}
     \caption{Airy disc pattern of the trapping beam}
     \label{fig:airy}
 \end{figure}
@@ -115,7 +115,7 @@ It is also possible that the fiber-coupled output already contains higher-order 
 \subsection{Sample Preparation and Trap Calibration}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth]{Second_draft/figs/sample_figure.png}
+    \includegraphics[width=1\linewidth]{./figs/sample_figure.png}
     \caption{Schematic of the trapped sample}
     \label{fig:sample}
 \end{figure}
@@ -144,7 +144,7 @@ The calibration of the $z$-axis proceeds in three steps:
 \end{enumerate}
 \begin{figure} % The [H] forces the image to appear here
     \centering
-    \includegraphics[width=1\linewidth]{Second_draft/figs/bw.png}
+    \includegraphics[width=1\linewidth]{./figs/bw.png}
     \caption{CCD captures. a) Overlayed images of a single particle before and after trap activation. Trap location is marked with a circle. b) Overlayed sequence of beads rotating due to a Piezo-induced driving force.}
     \label{fig:trapCamera}
 \end{figure}
@@ -274,7 +274,7 @@ In figures ~\ref{fig:plot1} and ~\ref{fig:plot2}, we observe linear trends betwe
 
 \begin{figure}
     \centering
-    \includegraphics[width=1\linewidth]{Second_draft/figs/paths.png}
+    \includegraphics[width=1\linewidth]{./figs/paths.png}
     \caption{(Left) raw trajectory of $10$ tracked microspheres over $15$ seconds; the trajectories display significant drift. (Right) drift-corrected trajectories.}
     \label{fig:trajCorrected}
 \end{figure}
@@ -287,7 +287,7 @@ Our first results showed a significant drift (Fig~\ref{fig:trajCorrected}). We c
 separately within each batch. The corrected trajectory are shown in Fig~\ref{fig:trajCorrected} (right). Based on the drift-corrected paths, we estimated the mean squared displacement as a function of time. The corrected displacements of each microsphere with respect to time are plotted in~\ref{fig:dispCorrected}. Note that the uncertainty in mean displacement increases with time, justifying the heteroskedastic slope error formula~\ref{eq:boltzBetaErrorHet}. 
 \begin{figure}
     \centering
-    \includegraphics[width=1\linewidth]{Second_draft/figs/displacements.png}
+    \includegraphics[width=1\linewidth]{./figs/displacements.png}
     \caption{(Left) displacement from the trap origin as a function of time for each microsphere.  (Right) linear fit of the average squared displacement with respect to time. }
     \label{fig:dispCorrected}
 \end{figure}

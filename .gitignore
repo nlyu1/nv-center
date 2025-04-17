@@ -1,0 +1,46 @@
+# LaTeX generated files
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+*.bbl
+*.blg
+*.dvi
+*.ps
+*.synctex.gz
+*.synctex
+*.xdv
+*.fdb_latexmk
+*.pdfsync
+
+# Output files (often ignored, remove if you want to track PDFs)
+*.pdf
+
+# Build directories/files
+_minted*
+_build/
+latex.out
+*.run.xml
+*.listing
+*.glo
+*.glg
+*.gls
+
+# Specific package files (e.g., minted, beamer)
+*.nav
+*.snm
+*.vrb
+*.pyg
+
+# Temporary files and backups
+*.bak
+*.backup
+*~
+.#* 
