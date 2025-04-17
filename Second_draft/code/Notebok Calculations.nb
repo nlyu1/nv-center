@@ -1,0 +1,587 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     21739,        579]
+NotebookOptionsPosition[     20390,        548]
+NotebookOutlinePosition[     20786,        564]
+CellTagsIndexPosition[     20743,        561]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Eta]", "[", "T_", "]"}], " ", ":=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Quantity", "[", 
+      RowBox[{
+       RowBox[{"-", "0.024"}], ",", " ", "\"\<miliPascal\>\""}], "]"}], " ", 
+     "*", " ", 
+     RowBox[{
+      RowBox[{"Quantity", "[", 
+       RowBox[{"1", ",", " ", "\"\<Seconds\>\""}], "]"}], "/", " ", 
+      RowBox[{"Quantity", "[", 
+       RowBox[{"1", ",", " ", "\"\<DegreesCelsiusDifference\>\""}], "]"}]}], 
+     "*", " ", 
+     RowBox[{"(", 
+      RowBox[{"T", " ", "-", " ", 
+       RowBox[{"Quantity", "[", 
+        RowBox[{"20.3", ",", " ", "\"\<Celsius\>\""}], "]"}]}], ")"}]}], " ", 
+    "+", " ", 
+    RowBox[{
+     RowBox[{"Quantity", "[", 
+      RowBox[{"0.9944", ",", " ", "\"\<miliPascal\>\""}], "]"}], " ", "*", 
+     " ", 
+     RowBox[{"Quantity", "[", 
+      RowBox[{"1", ",", " ", "\"\<Seconds\>\""}], "]"}]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Eta]", "[", 
+   RowBox[{"Quantity", "[", 
+    RowBox[{"20.4", ",", " ", "\"\<Celsius\>\""}], "]"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Clear", "[", "\[Eta]", "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.94950851310334*^9, 3.9495085229945087`*^9}, {
+   3.9495088091836643`*^9, 3.94950881073554*^9}, 3.949508873235257*^9},
+ CellLabel->
+  "In[160]:=",ExpressionUUID->"bd41a638-9aa7-4e4e-a693-a6423848b68a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", 
+    RowBox[{"a_", ",", " ", "T_", ",", " ", "\[Beta]_"}], "]"}], " ", ":=", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"6", " ", "\[Pi]", " ", 
+      RowBox[{"\[Eta]", "[", "T", "]"}], " ", "a"}], 
+     RowBox[{"4", " ", "T"}]], "\[Beta]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  SuperscriptBox[
+   RowBox[{"(", 
+    RowBox[{"\[Sigma]T", 
+     RowBox[{
+      SubscriptBox["\[PartialD]", "T"], 
+      RowBox[{"f", "[", 
+       RowBox[{"a", ",", " ", "T", ",", " ", "\[Beta]"}], "]"}]}]}], ")"}], 
+   "2"], "+", 
+  SuperscriptBox[
+   RowBox[{"(", 
+    RowBox[{"\[Sigma]a", 
+     RowBox[{
+      SubscriptBox["\[PartialD]", "a"], 
+      RowBox[{"f", "[", 
+       RowBox[{"a", ",", " ", "T", ",", " ", "\[Beta]"}], "]"}]}]}], ")"}], 
+   "2"], "+", 
+  SuperscriptBox[
+   RowBox[{"(", 
+    RowBox[{"\[Sigma]\[Beta]", 
+     RowBox[{
+      SubscriptBox["\[PartialD]", "\[Beta]"], 
+      RowBox[{"f", "[", 
+       RowBox[{"a", ",", " ", "T", ",", " ", "\[Beta]"}], "]"}]}]}], ")"}], 
+   "2"]}]}], "Input",
+ CellChangeTimes->{{3.949500444619063*^9, 3.949500525767275*^9}, {
+  3.949502412773706*^9, 3.9495024532859907`*^9}, {3.94950887711001*^9, 
+  3.949508897970627*^9}, {3.949509015785368*^9, 3.949509026585187*^9}},
+ CellLabel->
+  "In[181]:=",ExpressionUUID->"0efcfe77-55a5-4f37-bb6d-dda84758309c"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SuperscriptBox["\[Sigma]T", "2"], " ", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"a", " ", "\[Beta]", " ", 
+        RowBox[{"(", 
+         TemplateBox[{
+           RowBox[{"-", "0.11309733552923257`"}], 
+           
+           RowBox[{"\"s\"", "\[ThinSpace]", "\"mPa\"", "\[InvisibleSpace]", 
+             "\"/\"", "\[InvisibleSpace]", 
+             RowBox[{
+               
+               TemplateBox[{
+                "\"\[InvisiblePrefixScriptBase]\"", "\"\[CapitalDelta]\"", 
+                 "\"\[EmptySmallCircle]\""}, "Subsuperscript", SyntaxForm -> 
+                SubsuperscriptBox], "\"C\""}]}], 
+           "second millipascals per Celsius degree difference", 
+           FractionBox[
+            RowBox[{"\"Millipascals\"", " ", "\"Seconds\""}], 
+            "\"DegreesCelsiusDifference\""]},
+          "Quantity"], ")"}]}], "T"], "-", 
+      FractionBox[
+       RowBox[{"3", " ", "a", " ", "\[Pi]", " ", "\[Beta]", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          TemplateBox[{"0.9944`", 
+            RowBox[{"\"s\"", "\[ThinSpace]", "\"mPa\""}], 
+            "second millipascals", 
+            RowBox[{"\"Millipascals\"", " ", "\"Seconds\""}]},
+           "Quantity"], "+", 
+          RowBox[{
+           RowBox[{"(", 
+            TemplateBox[{
+              RowBox[{"-", "0.024`"}], 
+              
+              RowBox[{"\"s\"", "\[ThinSpace]", "\"mPa\"", "\[InvisibleSpace]",
+                 "\"/\"", "\[InvisibleSpace]", 
+                RowBox[{
+                  
+                  TemplateBox[{
+                   "\"\[InvisiblePrefixScriptBase]\"", "\"\[CapitalDelta]\"", 
+                    "\"\[EmptySmallCircle]\""}, "Subsuperscript", SyntaxForm -> 
+                   SubsuperscriptBox], "\"C\""}]}], 
+              "second millipascals per Celsius degree difference", 
+              FractionBox[
+               RowBox[{"\"Millipascals\"", " ", "\"Seconds\""}], 
+               "\"DegreesCelsiusDifference\""]},
+             "Quantity"], ")"}], " ", 
+           RowBox[{"(", 
+            RowBox[{"T", "-", 
+             
+             TemplateBox[{
+              "20.3`", "\"\[Degree]C\"", "degrees Celsius", 
+               "\"DegreesCelsius\""},
+              "Quantity"]}], ")"}]}]}], ")"}]}], 
+       RowBox[{"2", " ", 
+        SuperscriptBox["T", "2"]}]]}], ")"}], "2"]}], "+", 
+  FractionBox[
+   RowBox[{"9", " ", 
+    SuperscriptBox["\[Pi]", "2"], " ", 
+    SuperscriptBox["\[Beta]", "2"], " ", 
+    SuperscriptBox["\[Sigma]a", "2"], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       TemplateBox[{"0.9944`", 
+         RowBox[{"\"s\"", "\[ThinSpace]", "\"mPa\""}], "second millipascals", 
+         
+         RowBox[{"\"Millipascals\"", " ", "\"Seconds\""}]},
+        "Quantity"], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         TemplateBox[{
+           RowBox[{"-", "0.024`"}], 
+           
+           RowBox[{"\"s\"", "\[ThinSpace]", "\"mPa\"", "\[InvisibleSpace]", 
+             "\"/\"", "\[InvisibleSpace]", 
+             RowBox[{
+               
+               TemplateBox[{
+                "\"\[InvisiblePrefixScriptBase]\"", "\"\[CapitalDelta]\"", 
+                 "\"\[EmptySmallCircle]\""}, "Subsuperscript", SyntaxForm -> 
+                SubsuperscriptBox], "\"C\""}]}], 
+           "second millipascals per Celsius degree difference", 
+           FractionBox[
+            RowBox[{"\"Millipascals\"", " ", "\"Seconds\""}], 
+            "\"DegreesCelsiusDifference\""]},
+          "Quantity"], ")"}], " ", 
+        RowBox[{"(", 
+         RowBox[{"T", "-", 
+          
+          TemplateBox[{
+           "20.3`", "\"\[Degree]C\"", "degrees Celsius", "\"DegreesCelsius\""},
+           "Quantity"]}], ")"}]}]}], ")"}], "2"]}], 
+   RowBox[{"4", " ", 
+    SuperscriptBox["T", "2"]}]], "+", 
+  FractionBox[
+   RowBox[{"9", " ", 
+    SuperscriptBox["a", "2"], " ", 
+    SuperscriptBox["\[Pi]", "2"], " ", 
+    SuperscriptBox["\[Sigma]\[Beta]", "2"], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       TemplateBox[{"0.9944`", 
+         RowBox[{"\"s\"", "\[ThinSpace]", "\"mPa\""}], "second millipascals", 
+         
+         RowBox[{"\"Millipascals\"", " ", "\"Seconds\""}]},
+        "Quantity"], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         TemplateBox[{
+           RowBox[{"-", "0.024`"}], 
+           
+           RowBox[{"\"s\"", "\[ThinSpace]", "\"mPa\"", "\[InvisibleSpace]", 
+             "\"/\"", "\[InvisibleSpace]", 
+             RowBox[{
+               
+               TemplateBox[{
+                "\"\[InvisiblePrefixScriptBase]\"", "\"\[CapitalDelta]\"", 
+                 "\"\[EmptySmallCircle]\""}, "Subsuperscript", SyntaxForm -> 
+                SubsuperscriptBox], "\"C\""}]}], 
+           "second millipascals per Celsius degree difference", 
+           FractionBox[
+            RowBox[{"\"Millipascals\"", " ", "\"Seconds\""}], 
+            "\"DegreesCelsiusDifference\""]},
+          "Quantity"], ")"}], " ", 
+        RowBox[{"(", 
+         RowBox[{"T", "-", 
+          
+          TemplateBox[{
+           "20.3`", "\"\[Degree]C\"", "degrees Celsius", "\"DegreesCelsius\""},
+           "Quantity"]}], ")"}]}]}], ")"}], "2"]}], 
+   RowBox[{"4", " ", 
+    SuperscriptBox["T", "2"]}]]}]], "Output",
+ CellChangeTimes->{{3.949681801313713*^9, 3.9496818056651163`*^9}},
+ CellLabel->
+  "Out[182]=",ExpressionUUID->"08a5d781-76e9-45cc-9f58-1a3b465004ea"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"9", " ", 
+    SuperscriptBox["\[Pi]", "2"], " ", 
+    SuperscriptBox["\[Beta]", "2"], " ", 
+    SuperscriptBox["\[Sigma]a", "2"], " ", 
+    SuperscriptBox[
+     RowBox[{"\[Eta]", "[", "T", "]"}], "2"]}], 
+   RowBox[{"4", " ", 
+    SuperscriptBox["T", "2"]}]], "+", 
+  FractionBox[
+   RowBox[{"9", " ", 
+    SuperscriptBox["a", "2"], " ", 
+    SuperscriptBox["\[Pi]", "2"], " ", 
+    SuperscriptBox["\[Sigma]\[Beta]", "2"], " ", 
+    SuperscriptBox[
+     RowBox[{"\[Eta]", "[", "T", "]"}], "2"]}], 
+   RowBox[{"4", " ", 
+    SuperscriptBox["T", "2"]}]], "+", 
+  RowBox[{
+   SuperscriptBox["\[Sigma]T", "2"], " ", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox[
+        RowBox[{"3", " ", "a", " ", "\[Pi]", " ", "\[Beta]", " ", 
+         RowBox[{"\[Eta]", "[", "T", "]"}]}], 
+        RowBox[{"2", " ", 
+         SuperscriptBox["T", "2"]}]]}], "+", 
+      FractionBox[
+       RowBox[{"3", " ", "a", " ", "\[Pi]", " ", "\[Beta]", " ", 
+        RowBox[{
+         SuperscriptBox["\[Eta]", "\[Prime]",
+          MultilineFunction->None], "[", "T", "]"}]}], 
+       RowBox[{"2", " ", "T"}]]}], ")"}], "2"]}]}]], "Input",
+ CellChangeTimes->{3.949509432963168*^9},
+ CellLabel->
+  "In[163]:=",ExpressionUUID->"87731046-9527-45c7-92e6-7a53255a8adf"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"9", " ", 
+    SuperscriptBox["\[Pi]", "2"], " ", 
+    SuperscriptBox["\[Beta]", "2"], " ", 
+    SuperscriptBox["\[Sigma]a", "2"], " ", 
+    SuperscriptBox[
+     RowBox[{"\[Eta]", "[", "T", "]"}], "2"]}], 
+   RowBox[{"4", " ", 
+    SuperscriptBox["T", "2"]}]], "+", 
+  FractionBox[
+   RowBox[{"9", " ", 
+    SuperscriptBox["a", "2"], " ", 
+    SuperscriptBox["\[Pi]", "2"], " ", 
+    SuperscriptBox["\[Sigma]\[Beta]", "2"], " ", 
+    SuperscriptBox[
+     RowBox[{"\[Eta]", "[", "T", "]"}], "2"]}], 
+   RowBox[{"4", " ", 
+    SuperscriptBox["T", "2"]}]], "+", 
+  RowBox[{
+   SuperscriptBox["\[Sigma]T", "2"], " ", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox[
+        RowBox[{"3", " ", "a", " ", "\[Pi]", " ", "\[Beta]", " ", 
+         RowBox[{"\[Eta]", "[", "T", "]"}]}], 
+        RowBox[{"2", " ", 
+         SuperscriptBox["T", "2"]}]]}], "+", 
+      FractionBox[
+       RowBox[{"3", " ", "a", " ", "\[Pi]", " ", "\[Beta]", " ", 
+        RowBox[{
+         SuperscriptBox["\[Eta]", "\[Prime]",
+          MultilineFunction->None], "[", "T", "]"}]}], 
+       RowBox[{"2", " ", "T"}]]}], ")"}], "2"]}]}]], "Output",
+ CellChangeTimes->{3.949509432996722*^9},
+ CellLabel->
+  "Out[163]=",ExpressionUUID->"896eb4ae-110f-4ce2-b282-d1318cf8836f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"subs", " ", "=", " ", 
+  RowBox[{"{", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"a", "->", 
+     RowBox[{"Quantity", "[", 
+      RowBox[{"3", ",", " ", "\"\<microns\>\""}], "]"}]}], ",", " ", 
+    "\[IndentingNewLine]", 
+    RowBox[{"\[Sigma]a", "->", 
+     RowBox[{"Quantity", "[", 
+      RowBox[{"0.01", ",", " ", "\"\<microns\>\""}], "]"}]}], ",", " ", 
+    "\[IndentingNewLine]", 
+    RowBox[{"T", "->", " ", 
+     RowBox[{"UnitConvert", "[", 
+      RowBox[{
+       RowBox[{"Quantity", "[", 
+        RowBox[{"20.3", ",", " ", "\"\<Celsius\>\""}], "]"}], ",", " ", 
+       "\"\<Kelvins\>\""}], "]"}]}], ",", " ", "\[IndentingNewLine]", 
+    RowBox[{"\[Sigma]T", "->", 
+     RowBox[{"UnitConvert", "[", 
+      RowBox[{
+       RowBox[{"Quantity", "[", 
+        RowBox[{"0.1", ",", " ", "\"\<CelsiusDifference\>\""}], "]"}], ",", 
+       " ", "\"\<KelvinsDifference\>\""}], "]"}]}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"\[Beta]", "->", " ", 
+     RowBox[{
+      RowBox[{"Quantity", "[", 
+       RowBox[{"1.375", ",", " ", "\"\<microns\>\""}], "]"}], " ", "*", " ", 
+      RowBox[{
+       RowBox[{"Quantity", "[", 
+        RowBox[{"1", ",", " ", "\"\<microns\>\""}], "]"}], " ", "/", " ", 
+       RowBox[{"Quantity", "[", 
+        RowBox[{"1", ",", " ", "\"\<second\>\""}], "]"}]}]}]}], ",", " ", 
+    "\[IndentingNewLine]", 
+    RowBox[{"\[Sigma]\[Beta]", "->", 
+     RowBox[{
+      RowBox[{"Quantity", "[", 
+       RowBox[{"0.1", ",", " ", "\"\<microns\>\""}], "]"}], " ", "*", " ", 
+      RowBox[{
+       RowBox[{"Quantity", "[", 
+        RowBox[{"1", ",", " ", "\"\<microns\>\""}], "]"}], " ", "/", " ", 
+       RowBox[{"Quantity", "[", 
+        RowBox[{"1", ",", " ", "\"\<second\>\""}], "]"}]}]}]}]}], 
+   "\[IndentingNewLine]", "}"}]}]], "Input",
+ CellChangeTimes->{{3.949507768329185*^9, 3.949507807151223*^9}, {
+  3.949507955428772*^9, 3.949508064940884*^9}, {3.949508110421873*^9, 
+  3.949508158097331*^9}, {3.949508453368032*^9, 3.949508473443906*^9}, {
+  3.949508548293078*^9, 3.949508577716023*^9}, {3.94950865343526*^9, 
+  3.949508659480989*^9}, {3.949508693817831*^9, 3.9495087741620083`*^9}, {
+  3.949508840618431*^9, 3.949508846201621*^9}, {3.949508904056821*^9, 
+  3.949508905865498*^9}, {3.9495089376889467`*^9, 3.949508971219349*^9}, {
+  3.949509038038912*^9, 3.949509061627762*^9}, {3.9495093836627903`*^9, 
+  3.9495094150330763`*^9}, {3.949514244907694*^9, 3.949514250273643*^9}, {
+  3.949514310608972*^9, 3.949514312110717*^9}, {3.949681837365271*^9, 
+  3.949681838904827*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"b361e4ff-6aff-4f1d-894a-0692640f098e"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"a", "\[Rule]", 
+    TemplateBox[{"3", "\"microns\"", "microns", "\"Microns\""},
+     "Quantity"]}], ",", 
+   RowBox[{"\[Sigma]a", "\[Rule]", 
+    TemplateBox[{"0.01`", "\"microns\"", "microns", "\"Microns\""},
+     "Quantity"]}], ",", 
+   RowBox[{"T", "\[Rule]", 
+    TemplateBox[{"293.45`", "\"K\"", "kelvins", "\"Kelvins\""},
+     "Quantity"]}], ",", 
+   RowBox[{"\[Sigma]T", "\[Rule]", 
+    TemplateBox[{"0.1`", "\"K\"", "kelvins", "\"Kelvins\""},
+     "Quantity"]}], ",", 
+   RowBox[{"\[Beta]", "\[Rule]", 
+    TemplateBox[{"1.375`", 
+      RowBox[{
+        SuperscriptBox["\"microns\"", "2"], "\[NegativeMediumSpace]", "\"/\"",
+         "\[InvisibleSpace]", "\"s\""}], "microns squared per second", 
+      FractionBox[
+       SuperscriptBox["\"Microns\"", "2"], "\"Seconds\""]},
+     "Quantity"]}], ",", 
+   RowBox[{"\[Sigma]\[Beta]", "\[Rule]", 
+    TemplateBox[{"0.1`", 
+      RowBox[{
+        SuperscriptBox["\"microns\"", "2"], "\[NegativeMediumSpace]", "\"/\"",
+         "\[InvisibleSpace]", "\"s\""}], "microns squared per second", 
+      FractionBox[
+       SuperscriptBox["\"Microns\"", "2"], "\"Seconds\""]},
+     "Quantity"]}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.949508578251606*^9, {3.949508701560012*^9, 3.949508704120865*^9}, 
+   3.949508775074222*^9, {3.949508813721879*^9, 3.9495088182878513`*^9}, 
+   3.9495089089218483`*^9, {3.949508972918219*^9, 3.94950898995362*^9}, {
+   3.9495090457177258`*^9, 3.949509062049224*^9}, {3.949509415987734*^9, 
+   3.949509434178966*^9}, 3.949514251099855*^9, 3.949514312694496*^9, 
+   3.949681807070196*^9, 3.949681840595729*^9, 3.949682304655521*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"93f900e5-ec0e-404b-9f0d-118e7749d062"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[Eta]", "[", "T_", "]"}], " ", ":=", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Quantity", "[", 
+       RowBox[{
+        RowBox[{"-", "0.024"}], ",", " ", "\"\<miliPascal\>\""}], "]"}], " ", 
+      "*", " ", 
+      RowBox[{
+       RowBox[{"Quantity", "[", 
+        RowBox[{"1", ",", " ", "\"\<Seconds\>\""}], "]"}], "/", " ", 
+       RowBox[{"Quantity", "[", 
+        RowBox[{"1", ",", " ", "\"\<DegreesCelsiusDifference\>\""}], "]"}]}], 
+      "*", " ", 
+      RowBox[{"(", 
+       RowBox[{"T", " ", "-", " ", 
+        RowBox[{"Quantity", "[", 
+         RowBox[{"20.3", ",", " ", "\"\<Celsius\>\""}], "]"}]}], ")"}]}], " ",
+      "+", " ", 
+     RowBox[{
+      RowBox[{"Quantity", "[", 
+       RowBox[{"0.9944", ",", " ", "\"\<miliPascal\>\""}], "]"}], " ", "*", 
+      " ", 
+      RowBox[{"Quantity", "[", 
+       RowBox[{"1", ",", " ", "\"\<Seconds\>\""}], "]"}]}]}]}], ";"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "Point", " ", "estimate", " ", "of", " ", "the", " ", "Boltzmann", " ", 
+    "constant"}], " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{"UnitConvert", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"f", "[", 
+     RowBox[{"a", ",", " ", "T", ",", " ", "\[Beta]"}], "]"}], " ", "/.", " ",
+     "subs"}], ",", " ", "\"\<J/K\>\""}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"UnitConvert", "[", 
+  RowBox[{
+   SqrtBox[
+    RowBox[{
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"\[Sigma]T", 
+         RowBox[{
+          SubscriptBox["\[PartialD]", "T"], 
+          RowBox[{"f", "[", 
+           RowBox[{"a", ",", " ", "T", ",", " ", "\[Beta]"}], "]"}]}]}], 
+        ")"}], "2"], "+", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"\[Sigma]a", 
+         RowBox[{
+          SubscriptBox["\[PartialD]", "a"], 
+          RowBox[{"f", "[", 
+           RowBox[{"a", ",", " ", "T", ",", " ", "\[Beta]"}], "]"}]}]}], 
+        ")"}], "2"], "+", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"\[Sigma]\[Beta]", 
+         RowBox[{
+          SubscriptBox["\[PartialD]", "\[Beta]"], 
+          RowBox[{"f", "[", 
+           RowBox[{"a", ",", " ", "T", ",", " ", "\[Beta]"}], "]"}]}]}], 
+        ")"}], "2"]}], " ", "/.", " ", "subs"}]], ",", " ", "\"\<J/K\>\""}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.949508574712332*^9, 3.9495085882079773`*^9}, {
+  3.9495086684420033`*^9, 3.9495086909381638`*^9}, {3.949508785258829*^9, 
+  3.949508800864401*^9}, {3.949508918668573*^9, 3.9495089193302813`*^9}, {
+  3.9495090001087227`*^9, 3.9495090031826057`*^9}, {3.949509073823469*^9, 
+  3.949509189095976*^9}, {3.9495092669088793`*^9, 3.949509301078463*^9}},
+ CellLabel->
+  "In[185]:=",ExpressionUUID->"6b7c4170-7615-4357-9518-3d704e4caf9f"],
+
+Cell[BoxData[
+ TemplateBox[{"6.587067084218762`*^-23", 
+   RowBox[{
+    "\"J\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", "\"K\""}], 
+   "joules per kelvin", 
+   FractionBox["\"Joules\"", "\"Kelvins\""]},
+  "Quantity"]], "Output",
+ CellChangeTimes->{{3.949508575866613*^9, 3.949508588719516*^9}, {
+   3.949508686420079*^9, 3.949508691271021*^9}, {3.949508796733171*^9, 
+   3.94950881976798*^9}, {3.9495089073672047`*^9, 3.949508920405445*^9}, {
+   3.9495089918150463`*^9, 3.9495090036370687`*^9}, {3.9495090671416407`*^9, 
+   3.9495091617512283`*^9}, {3.949509289284254*^9, 3.9495093015495043`*^9}, {
+   3.949509425177833*^9, 3.949509435418811*^9}, {3.949514252463292*^9, 
+   3.949514261714267*^9}, 3.949514313856184*^9, 3.949681842872449*^9},
+ CellLabel->
+  "Out[186]=",ExpressionUUID->"ebbba164-b7bb-4816-bd24-4ff8babf79fd"],
+
+Cell[BoxData[
+ TemplateBox[{"4.7990540127874605`*^-24", 
+   RowBox[{
+    "\"J\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", "\"K\""}], 
+   "joules per kelvin", 
+   FractionBox["\"Joules\"", "\"Kelvins\""]},
+  "Quantity"]], "Output",
+ CellChangeTimes->{{3.949508575866613*^9, 3.949508588719516*^9}, {
+   3.949508686420079*^9, 3.949508691271021*^9}, {3.949508796733171*^9, 
+   3.94950881976798*^9}, {3.9495089073672047`*^9, 3.949508920405445*^9}, {
+   3.9495089918150463`*^9, 3.9495090036370687`*^9}, {3.9495090671416407`*^9, 
+   3.9495091617512283`*^9}, {3.949509289284254*^9, 3.9495093015495043`*^9}, {
+   3.949509425177833*^9, 3.949509435418811*^9}, {3.949514252463292*^9, 
+   3.949514261714267*^9}, 3.949514313856184*^9, 3.9496818428911457`*^9},
+ CellLabel->
+  "Out[187]=",ExpressionUUID->"bc2dd550-19a3-40b9-80eb-b9507d16724a"]
+}, Open  ]]
+},
+WindowSize->{1920, 1067},
+WindowMargins->{{454, Automatic}, {Automatic, 52}},
+FrontEndVersion->"14.1 for Mac OS X ARM (64-bit) (July 16, 2024)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"abdebc7c-c277-4da3-84b8-e265a18673ba"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[554, 20, 1393, 38, 70, "Input",ExpressionUUID->"bd41a638-9aa7-4e4e-a693-a6423848b68a"],
+Cell[CellGroupData[{
+Cell[1972, 62, 1354, 39, 65, "Input",ExpressionUUID->"0efcfe77-55a5-4f37-bb6d-dda84758309c"],
+Cell[3329, 103, 5439, 142, 60, "Output",ExpressionUUID->"08a5d781-76e9-45cc-9f58-1a3b465004ea"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8805, 250, 1332, 39, 46, "Input",ExpressionUUID->"87731046-9527-45c7-92e6-7a53255a8adf"],
+Cell[10140, 291, 1333, 39, 49, "Output",ExpressionUUID->"896eb4ae-110f-4ce2-b282-d1318cf8836f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11510, 335, 2617, 56, 172, "Input",ExpressionUUID->"b361e4ff-6aff-4f1d-894a-0692640f098e"],
+Cell[14130, 393, 1746, 38, 39, "Output",ExpressionUUID->"93f900e5-ec0e-404b-9f0d-118e7749d062"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15913, 436, 2780, 75, 98, "Input",ExpressionUUID->"6b7c4170-7615-4357-9518-3d704e4caf9f"],
+Cell[18696, 513, 836, 15, 35, "Output",ExpressionUUID->"ebbba164-b7bb-4816-bd24-4ff8babf79fd"],
+Cell[19535, 530, 839, 15, 35, "Output",ExpressionUUID->"bc2dd550-19a3-40b9-80eb-b9507d16724a"]
+}, Open  ]]
+}
+]
+*)
+
