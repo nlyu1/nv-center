@@ -1,0 +1,91 @@
+% Conveniently, the citeautoscript option in the revtex4-2 class toggles the spacing & punctuation automatically for superscript vs. bracketed citations. Place citations as if they were in [].
+% Uncomment the line below to do superscript citations.
+% \setcitestyle{super}
+
+\usepackage{amsmath,amssymb} % math symbols
+\usepackage{bm} % bold math font
+\usepackage{graphicx} % for figures
+\usepackage{comment} % allows block comments
+\usepackage[normalem]{ulem} % allows strikeout text, e.g. \sout{text}
+
+% \usepackage{minted} % allows colored code
+% \usepackage{textcomp} % This package gives the text quote '
+
+\usepackage{enumitem}
+\setlist{noitemsep,leftmargin=*,topsep=0pt,parsep=0pt}
+
+\usepackage{xcolor} % \textcolor{red}{text} will be red for notes
+\definecolor{lightgray}{gray}{0.6}
+\definecolor{medgray}{gray}{0.4}
+\definecolor{mRed}{RGB}{230, 0, 50}
+\colorlet{newtextColor}{mRed}
+
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+urlcolor= blue,
+citecolor=blue,
+linkcolor= blue,
+}
+
+% Code to add paragraph numbers and titles
+\newif\ifptitle
+\newif\ifpnumber
+\newcounter{para}
+\newcommand\ptitle[1]{\par\refstepcounter{para}
+{\ifpnumber{\noindent\textcolor{lightgray}{\textbf{\thepara}}\indent}\fi}
+{\ifptitle{\textbf{[{#1}]}}\fi}}
+%\ptitletrue  % comment this line to hide paragraph titles
+%\pnumbertrue  % comment this line to hide paragraph numbers
+
+% Code for reviewer text
+%\newcommand{\revtext}[1]{\textcolor{reviewColor}{#1}}
+\newcommand{\revtext}[1]{\textit{#1}}
+
+% Code to track changes
+\newif\iftrackchanges
+\newcommand{\newtext}[1]
+    {\textcolor{\iftrackchanges newtextColor\else black\fi}{#1}}
+\newcommand{\deltext}[1]
+    {\iftrackchanges{\textcolor{newtextColor}{\sout{#1}}}\fi}
+%\trackchangestrue  % comment to hide tracked changes
+
+% Instead of making TONS of colored newtext, let's just put a colored line next to big blocks of new text.
+\usepackage{mdframed}
+\newmdenv[
+  linecolor={\iftrackchanges newtextColor\else white\fi},
+  linewidth=2pt,
+  topline=false,
+  bottomline=false,
+  rightline=false,
+  skipabove=\topsep,
+  skipbelow=\topsep,
+  leftmargin=-12pt,
+  innertopmargin=0pt,
+  innerbottommargin=0pt
+]{newtextblock}
+
+% Uncomment this line if you prefer your vectors to appear as bold letters.
+% By default they will appear with arrows over them.
+% \renewcommand{\vec}[1]{\bm{#1}}
+
+% Command to mark text in blue/red and define common units
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\df}{\dfrac}
+\newcommand{\mic}{\mu\mathrm{m}}
+\newcommand{\nm}{\mathrm{nm}}
+\newcommand{\mm}{\mathrm{mm}}
+\newcommand{\mrm}[1]{\mathrm{#1}}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\pd}[1]{\partial_{#1}}
+% Command for labeled equations with custom alignment
+\newcommand{\leqalign}[2]{
+    \begin{equation}
+        \begin{aligned}
+            #2
+        \end{aligned}
+        \label{#1}
+    \end{equation}
+}
