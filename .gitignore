@@ -43,4 +43,9 @@ latex.out
 *.bak
 *.backup
 *~
-.#* 
+.#*
+
+# macOS
+.DS_Store
+
+# If other patterns exist, add this under a macOS section or at the end 
