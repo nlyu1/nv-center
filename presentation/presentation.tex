@@ -96,10 +96,23 @@
     \item Microwave Delivery: source, amplifier, antenna. 
     \item Control: LabVIEW, DAQ card, pulse generator. 
 \end{itemize}
-\begin{figure}
-    \includegraphics[width=0.7\textwidth]{figs/lattice.png} % Adjust path if needed
-    \caption{Experiment setup (Placeholder)}
-    \end{figure}
+
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{presentation/figs/exptsetup.jpg}
+   
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{presentation/figs/sample.jpg}
+       
+    \end{minipage}
+
+\end{frame}
+
+\begin{frame}{Labeled picture of workspace}
+    
 \end{frame}
 
 %------------------------------------------------
@@ -119,6 +132,7 @@
 
 \begin{frame}
 \frametitle{$g^{(2)}$ Measurement: Result}
+GET PICTURE
 \begin{itemize}
     \item Experimental histogram of photon arrival time differences.
     \item Clear dip observed near $\tau = 0$: single photon emitter!
@@ -128,6 +142,19 @@
 % \includegraphics[width=0.7\textwidth]{../first_draft/figs/g2_histogram.png} % Adjust path if needed
 % \caption{$g^{(2)}(\tau)$ measurement showing antibunching.}
 % \end{figure}
+\end{frame}
+\begin{frame}{Splitting}
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{presentation/figs/dips.png}
+        {\small(a) First image caption}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{presentation/figs/split_vs_field.png}
+        {\small(b) Second image caption}
+    \end{minipage}
 \end{frame}
 % \section{Coherent Control}
 
@@ -167,13 +194,32 @@
     \end{itemize}
     \item PL$(t) \propto \cos(\Omega_R t + \phi) \exp(-t/T_{Rabi})$. $\Omega_R$: Rabi frequency.
 \end{itemize}
-% Add Rabi figure
-% \begin{figure}
-% \includegraphics[width=0.7\textwidth]{../first_draft/figs/rabi.png} % Adjust path if needed
-% \caption{Rabi oscillations.}
-% \end{figure}
-\end{frame}
 
+\end{frame}
+\begin{frame}{}
+    \centering
+    % Top row: two images side by side
+    \begin{minipage}{0.4\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{presentation/figs/oscilations.png} \\
+        {\small (a) First image}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.4\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{presentation/figs/attenuation_vs_power.png} \\
+        {\small (b) Second image}
+    \end{minipage}
+
+    \vspace{1em} % Vertical space between rows
+
+    % Bottom row: one centered image
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{presentation/figs/period_vs_power.png} \\
+        {\small (c) Third image (centered below)}
+    \end{minipage}
+\end{frame}
 \begin{frame}
 \frametitle{Hahn Echo}
 \begin{itemize}
@@ -184,13 +230,15 @@
     \end{itemize}
     \item Fit: Envelope$(2\tau) \propto \exp(-(2\tau/T_2)^p)$. $T_2$: coherence time. 
 \end{itemize}
-% Add Hahn echo figure
-% \begin{figure}
-% \includegraphics[width=0.7\textwidth]{../first_draft/figs/hahn.png} % Adjust path if needed
-% \caption{Hahn echo decay.}
-% \end{figure}
+
 \end{frame}
 
+\begin{frame}{Results}
+    \centering
+    \includegraphics[width=\linewidth]{presentation/figs/hahn.png}\
+
+    Discussion:
+\end{frame}
 %------------------------------------------------
 
 % Optional: Add Conclusion Section
